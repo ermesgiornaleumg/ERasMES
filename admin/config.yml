@@ -1,1 +1,23 @@
+backend:
+  name: github
+  repo: ermesgiornaleumg/erasmes
+  branch: main
+  auth_type: implicit
 
+media_folder: "images/uploads"
+public_folder: "/images/uploads"
+
+collections:
+  - name: "articoli"
+    label: "Articoli"
+    folder: "_articoli"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - {label: "Titolo Articolo", name: "title", widget: "string"}
+      - {label: "Data di Pubblicazione", name: "date", widget: "datetime"}
+      - {label: "Categoria", name: "category", widget: "select", options: ["Guida Pratica", "Cultura & Vita", "Viaggi", "Eventi"]}
+      - {label: "Autore", name: "author", widget: "string", default: "Redazione ERasMES"}
+      - {label: "Immagine di Copertina", name: "image", widget: "image"}
+      - {label: "Estratto / Anteprima", name: "excerpt", widget: "text"}
+      - {label: "Contenuto Articolo", name: "body", widget: "markdown"}
