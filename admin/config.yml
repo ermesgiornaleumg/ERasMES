@@ -1,8 +1,6 @@
 backend:
-  name: github
-  repo: ermesgiornaleumg/erasmes
+  name: git-gateway
   branch: main
-  base_url: https://sentryoauth.deno.dev
 
 media_folder: "images/uploads"
 public_folder: "/images/uploads"
