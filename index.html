@@ -45,23 +45,17 @@
     .nav-container {
       max-width: 1100px;
       margin: 0 auto;
-      padding: 1rem 1.5rem;
+      padding: 0.8rem 1.5rem;
       display: flex;
       justify-content: space-between;
       align-items: center;
     }
 
-    .logo {
-      font-family: 'Outfit', sans-serif;
-      font-size: 1.8rem;
-      font-weight: 800;
-      color: var(--primary);
-      text-decoration: none;
-      letter-spacing: -0.5px;
-    }
-
-    .logo span {
-      color: var(--accent);
+    .logo-img {
+      height: 50px;
+      width: auto;
+      display: block;
+      object-fit: contain;
     }
 
     .badge-top {
@@ -73,6 +67,16 @@
       font-weight: 700;
       text-transform: uppercase;
       letter-spacing: 0.5px;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .badge-img {
+      height: 20px;
+      width: auto;
+      display: block;
+      object-fit: contain;
     }
 
     /* HERO SECTION */
@@ -138,18 +142,7 @@
     .container {
       max-width: 1100px;
       margin: 0 auto;
-      padding: 3rem 1.5rem;
-    }
-
-    .section-title {
-      font-family: 'Outfit', sans-serif;
-      font-size: 1.8rem;
-      font-weight: 700;
-      color: var(--primary);
-      margin-bottom: 2rem;
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
+      padding: 2rem 1.5rem 3rem 1.5rem;
     }
 
     /* GRID DI ARTICOLI */
@@ -252,16 +245,12 @@
       font-size: 0.95rem;
     }
 
-    footer a {
-      color: var(--gold);
-      text-decoration: none;
-    }
-
     /* RESPONSIVE */
     @media (max-width: 768px) {
       .hero h1 { font-size: 2.2rem; }
       .hero p { font-size: 1rem; }
       .grid { grid-template-columns: 1fr; }
+      .logo-img { height: 40px; }
     }
   </style>
 </head>
@@ -270,8 +259,13 @@
   <!-- NAVBAR -->
   <header>
     <div class="nav-container">
-      <a href="#" class="logo">ER<span>as</span>MES</a>
-      <span class="badge-top">Rubrica Ermes</span>
+      <a href="#">
+        <img src="logo.png" alt="ERasMES Logo" class="logo-img">
+      </a>
+      <div class="badge-top">
+        <img src="logo-ermes.png" alt="Ermes Logo" class="badge-img">
+        <span>Rubrica Ermes</span>
+      </div>
     </div>
   </header>
 
@@ -290,8 +284,6 @@
 
   <!-- LISTA ARTICOLI -->
   <main class="container">
-    <h2 class="section-title">Ultimi Articoli</h2>
-
     <div class="grid">
       <!-- Articolo 1 -->
       <article class="card">
