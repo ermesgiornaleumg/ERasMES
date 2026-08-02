@@ -1,5 +1,6 @@
 backend:
   name: git-gateway
+  site_domain: animated-panda-82f1b2.netlify.app
   branch: main
 
 media_folder: "images/uploads"
