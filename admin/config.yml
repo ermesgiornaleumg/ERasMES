@@ -3,19 +3,19 @@ backend:
   branch: main
 
 media_folder: "images/uploads"
-public_folder: "/images/uploads"
+public_folder: "images/uploads"
 
 collections:
   - name: "articoli"
-    label: "Articoli"
+    label: "Articoli del Giornalino"
     folder: "_articoli"
     create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    slug: "{{slug}}"
     fields:
-      - {label: "Titolo Articolo", name: "title", widget: "string"}
+      - {label: "Titolo dell'Articolo", name: "title", widget: "string"}
       - {label: "Data di Pubblicazione", name: "date", widget: "datetime"}
       - {label: "Categoria", name: "category", widget: "select", options: ["Guida Pratica", "Cultura & Vita", "Viaggi", "Eventi"]}
-      - {label: "Autore", name: "author", widget: "string", default: "Redazione ERasMES"}
-      - {label: "Immagine di Copertina", name: "image", widget: "image"}
-      - {label: "Estratto / Anteprima", name: "excerpt", widget: "text"}
-      - {label: "Contenuto Articolo", name: "body", widget: "markdown"}
+      - {label: "Nome Autore", name: "author", widget: "string", default: "Redazione ERasMES"}
+      - {label: "Foto di Copertina", name: "image", widget: "image"}
+      - {label: "Breve Riassunto (per la Home)", name: "excerpt", widget: "text"}
+      - {label: "Testo dell'Articolo", name: "body", widget: "markdown"}
