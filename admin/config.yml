@@ -2,7 +2,7 @@ backend:
   name: github
   repo: ermesgiornaleumg/erasmes
   branch: main
-  auth_type: implicit
+  base_url: https://sentryoauth.deno.dev
 
 media_folder: "images/uploads"
 public_folder: "/images/uploads"
